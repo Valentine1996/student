@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  gpatests: 1.5
+  gpaexams: 1.5
+  bursaly: 1
+
+two:
+  gpatests: 1.5
+  gpaexams: 1.5
+  bursaly: 1

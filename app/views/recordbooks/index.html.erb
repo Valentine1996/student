@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Recordbooks</h1>
+
+<div>
+    <%= form_tag( recordbooks_path, :method => 'get' ) do %>
+        <p>
+            <%= text_field_tag :search, params[:search] %>
+            <%= submit_tag "Search", :name => nil %>
+        </p>
+    <% end %>
+</div>
+
+<table cellspacing = "4">
+  <thead>
+    <tr>
+      <th width="50" >Gpatests</th>
+      <th>Gpaexams</th>
+      <th>Bursaly</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @recordbooks.each do |recordbook| %>
+      <tr>
+        <td><%= recordbook.gpatests %></td>
+        <td><%= recordbook.gpaexams %></td>
+        <td><%= recordbook.bursaly %></td>
+        <td><%= link_to 'Show', recordbook %></td>
+        <td><%= link_to 'Edit', edit_recordbook_path(recordbook) %></td>
+        <td><%= link_to 'Destroy', recordbook, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Recordbook', new_recordbook_path %>

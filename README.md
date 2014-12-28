@@ -1,4 +1,4 @@
 student
 =======
 
-For univesity
+For university

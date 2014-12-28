@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fullname: MyString
+  birthday: 2014-12-22
+  Recordbook_id: 
+  Faculty_id: 
+  group: MyString
+
+two:
+  fullname: MyString
+  birthday: 2014-12-22
+  Recordbook_id: 
+  Faculty_id: 
+  group: MyString

@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Lecturers</h1>
+
+<div>
+    <%= form_tag( lecturers_path, :method => 'get' ) do %>
+        <p>
+            <%= text_field_tag :search, params[:search] %>
+            <%= submit_tag "Search", :name => nil %>
+        </p>
+    <% end %>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fullname</th>
+      <th>Degree</th>
+      <th>Salary</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lecturers.each do |lecturer| %>
+      <tr>
+        <td><%= lecturer.fullname %></td>
+        <td><%= lecturer.degree %></td>
+        <td><%= lecturer.salary %></td>
+        <td><%= link_to 'Show', lecturer %></td>
+        <td><%= link_to 'Edit', edit_lecturer_path(lecturer) %></td>
+        <td><%= link_to 'Destroy', lecturer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Lecturer', new_lecturer_path %>

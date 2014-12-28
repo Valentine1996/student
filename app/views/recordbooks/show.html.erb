@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Gpatests:</strong>
+  <%= @recordbook.gpatests %>
+</p>
+
+<p>
+  <strong>Gpaexams:</strong>
+  <%= @recordbook.gpaexams %>
+</p>
+
+<p>
+  <strong>Bursaly:</strong>
+  <%= @recordbook.bursaly %>
+</p>
+
+<%= link_to 'Edit', edit_recordbook_path(@recordbook) %> |
+<%= link_to 'Back', recordbooks_path %>

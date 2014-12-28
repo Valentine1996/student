@@ -1,0 +1,29 @@
+<%= form_for(@recordbook) do |f| %>
+  <% if @recordbook.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@recordbook.errors.count, "error") %> prohibited this recordbook from being saved:</h2>
+
+      <ul>
+      <% @recordbook.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :gpatests %><br>
+    <%= f.text_field :gpatests %>
+  </div>
+  <div class="field">
+    <%= f.label :gpaexams %><br>
+    <%= f.text_field :gpaexams %>
+  </div>
+  <div class="field">
+    <%= f.label :bursaly %><br>
+    <%= f.number_field :bursaly %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
